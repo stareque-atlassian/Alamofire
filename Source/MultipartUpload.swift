@@ -75,6 +75,7 @@ extension MultipartUpload: UploadConvertible {
     func asURLRequest() throws -> URLRequest {
         var urlRequest = try request.asURLRequest()
         urlRequest.headers.add(.contentType(multipartFormData.contentType))
+
         return urlRequest
     }
 
